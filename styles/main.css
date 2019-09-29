@@ -1,0 +1,26 @@
+label {
+
+ display: block;
+ font-family: 'Times New Roman', Times, serif;
+ margin-top: 0.5rem;
+ color: crimson;
+
+}
+
+input[type="button"] {
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 300px;
+}
+
+h1, p { 
+    color: darkslateblue;
+}
+
+h1 {
+    text-align: center;
+}
