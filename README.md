@@ -1,1 +1,1 @@
-# html-javascript-workshop
+#Repositório contendo todos os fontes apresentados no Workshop da semana acadêmica UNISOCIESC

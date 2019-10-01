@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Workshop SOCIESC</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <form method="GET" name="workshop-html-js" onsubmit="bootstrapValues()" class="needs-validation" novalidate>
+
+        <div class="card-body">
+            <h1 class="card-head">Cadastro de Pessoa Física</h1>
+
+            <p class="card-title"><strong>Dados Pessoais</strong></p>
+            <div class="card w-50">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-auto">
+                            <label for="nameFor" class="col-md-3">Nome</label>
+                            <input type="text" name="name" id="nameForm" class="form-control"
+                                placeholder="Digite seu nome" required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                        <div class="form-group col-md-3 in-line">
+                            <label for="lastNameForm" class="col-auto">Sobrenome</label>
+                            <input type="text" name="lastName" id="lastNameForm" class="form-control"
+                                placeholder="Digite seu sobrenome" required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-auto">
+                            <label for="ageForm" class="col-md-3">Idade</label>
+                            <input type="text" min="16" max="60" name="age" id="ageForm" class="form-control"
+                                placeholder="Digite sua idade" required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="dateForm" class="col-md-10">Data de Nascimento</label>
+                            <input type="date" name="date" id="dateForm" class="form-control" required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-auto">
+                            <label for="cpfForm" class="col-md-3"> CPF </label>
+                            <input type="text" maxlength="11" name="cpf" id="cpfForm" placeholder="Insira seu C.P.F"
+                                class="form-control" required>
+                            <small id="cpfForm" class="form-text text-muted col-auto">Sem pontos e hífen</small>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="phoneForm" class="col-md-10">Número de Telefone</label>
+                            <input type="text" name="phone" id="phoneForm" maxlength="15"
+                                placeholder="Número de telefone" class="form-control" required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <p class="card-title"><strong>Gênero</strong></p>
+            <div class="card w-50">
+                <div class="card-body">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" id="genderForm1" value="Homem" class="form-check-input">
+                        <label class="form-check-label" for="genderForm1">Homem</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" id="genderForm2" value="Mulher" class="form-check-input">
+                        <label class="form-check-label" for="genderForm2">Mulher</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="gender" id="genderForm3" value="Outro" class="form-check-input">
+                        <label class="form-check-label" for="genderForm3">Outro</label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <p class="card-title"><strong>Endereço</strong></p>
+            <div class="card" style="width: 54rem;">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-auto">
+                            <label for="adressForm" class="col-md-3">Rua</label>
+                            <input type="text" name="adress" placeholder="Digite seu endereço" class="form-control"
+                                required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+                        <div class="form-group col-auto">
+                            <label for="numberForm" class="col-md-5">Número</label>
+                            <input type="text" name="number" placeholder="Número da casa/apto" class="form-control"
+                                required>
+
+                            <div class="valid-feedback col-auto">Campo válido!</div>
+                            <div class="invalid-feedback col-auto">Campo inválido!</div>
+                        </div>
+
+                        <div class="form-group col-md-1.5">
+                            <label for="ufForm" class="col-auto">Estado</label>
+                            <select name="UF" id="ufForm" class="form-control">
+                                <option value="--" autofocus>--</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="PR">Paraná</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="MG">Minas Gerais</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <p class="card-title"><strong>Dados de Acesso</strong></p>
+            <div class="card w-50">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="emailForm" class="col-auto">E-mail</label>
+                        <input type="email" name="email" id="emailForm" placeholder="Preencha seu e-mail"
+                            class="form-control form-control-sm" aria-describedby="emailHelp" required>
+                        <small id="emailHelp" class="form-text text-muted col-auto">Não compartilhamos o seu e-mail com
+                            ninguém</small>
+
+                        <div class="valid-feedback col-auto">Campo OK!</div>
+                        <div class="invalid-feedback col-auto">Campo inválido!</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwForm" class="col-auto">Senha</label>
+                        <input type="password" name="pw" id="pwForm" minlength="8" placeholder="Digite a sua senha"
+                            class="form-control form-control-sm" aria-describedby="pwForm" required>
+                        <small id="pwForm" class="form-text text-muted col-auto">Mínimo de 8 Caractéres</small>
+
+                        <div class="valid-feedback col-auto">Campo OK!</div>
+                        <div class="invalid-feedback col-auto">Campo inválido!</div>
+                    </div>
+                </div>
+
+                <br>
+                <div>
+                    <button type="submit" class="btn btn-primary mb-2">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        (function () {
+            window.addEventListener('load', function () {
+                var form = document.getElementsByName('workshop-html-js');
+                var validation = Array.prototype.filter.call(form, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
