@@ -7,26 +7,20 @@ label {
 
  display: block;
  font-family: Arial, Helvetica, sans-serif;
- /* margin-top: 0.5rem; */
  color: blue;
  font-weight: bold;
 
 }
 
-/* small {
-    display: inline;
-    margin-left: 2rem;
-} */
-
-input[type="button"] {
-    margin-top: 1rem;
+button[type="submit"]  {
+    margin-left: 120px;
+    width: 100px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="date"],
-button[type="submit"] {
+input[type="date"] {
     margin-left: 10px;
     width: 300px;
 }
