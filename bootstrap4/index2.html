@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WORKSHOP</title>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='style2.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3 text-center">
+                    <h1 class="display-4">Welcome to SOCIESC</h1><br>
+                    <form name="workshop" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control form-control-sm" required>
+                            <small id="email" class="format-text text-muted">Example: user@email.com</small>
+
+                            <div class="valid-feedback">It's allright</div>
+                            <div class="invalid-feedback">Ops.. Something Wrong!</div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" id="pw" class="form-control form-control-sm" minlength="6"
+                                maxlength="8" required>
+                            <small id="pw" class="format-text text-muted">Minimum 6 and maximus 8 characters</small>
+
+                            <div class="valid-feedback">It's allright</div>
+                            <div class="invalid-feedback">Ops.. Something Wrong!</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"
+                            style="margin-left: 20px; width: 100px;">Loggin</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            window.addEventListener('load', function () {
+                var form = document.getElementsByName('workshop');
+                var validation = Array.prototype.filter.call(form, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
